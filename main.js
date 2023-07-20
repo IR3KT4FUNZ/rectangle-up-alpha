@@ -54,7 +54,7 @@ window.addEventListener('load', function(){
         }
 
         checkBotHit(x1, y1, w1, h1, x2, y2, w2, h2) {
-            if (this.intersect(x1, y1, w1, h1, x2, y2, w2, h2) && window.performance.now() - this.character.lastHit > 700) {
+            if (this.intersect(x1, y1, w1, h1, x2, y2, w2, h2) && window.performance.now() - this.character.lastHit > 500) {
                 if (this.character.lightAttacking) {
                     this.bot.health = Math.max(0, this.bot.health - 8);
                     this.character.lastHit = window.performance.now();
@@ -95,5 +95,4 @@ window.addEventListener('load', function(){
     }
 
     animate();
-    
 });
