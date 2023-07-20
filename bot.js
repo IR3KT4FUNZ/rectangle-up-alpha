@@ -32,19 +32,19 @@ export class Bot {
     //moves it around
     update() {
         this.checkDead();
-        if (this.randomNumber(60) <= 59 && this.facingLeft && !(this.x <= 0)) {
+        if (this.randomNumber(100) <= 99 && this.facingLeft && !(this.x <= 0)) {
             this.commanda();
         } else {
             this.commandd();
             this.facingLeft = false;
         }
-        if (this.randomNumber(60) <= 59 && !this.facingLeft && !(this.x >= this.game.width - this.width)) {
+        if (this.randomNumber(100) <= 99 && !this.facingLeft && !(this.x >= this.game.width - this.width)) {
             this.commandd();
         } else {
             this.commanda();
             this.facingLeft = true;
         }
-        if (this.randomNumber(100) <= 3) {
+        if (this.randomNumber(100) <= 2) {
             this.commandw();
         }
         //missing commands: crouch, fastfall, all types of attacks, descend platform, etc.
