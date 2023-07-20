@@ -173,13 +173,13 @@ export class Character {
     }
 
     checkAttackEnd() {
-        if (window.performance.now() - this.lastAttack > 200 && this.lightAttacking) {
+        if (window.performance.now() - this.lastAttack > 400 && this.lightAttacking) {
             this.lightAttacking = false;
             this.resetAttack();
-        } else if (window.performance.now() - this.lastAttack > 400 && this.heavyAttacking) {
+        } else if (window.performance.now() - this.lastAttack > 500 && this.heavyAttacking) {
             this.heavyAttacking = false;
             this.resetAttack();
-        } else if (window.performance.now() - this.lastAttack > 300 && this.uppercutting) {
+        } else if (window.performance.now() - this.lastAttack > 400 && this.uppercutting) {
             this.uppercutting = false;
             this.resetAttack();
         } else if (((window.performance.now() - this.lastAttack > 600 || this.onGround()) && this.groundpound) || this.yVel <= 0) {
